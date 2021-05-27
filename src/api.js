@@ -30,8 +30,6 @@ const popularGames = `games?${key}&dates=${lastYear},${currentDate}&ordering=-ra
 const upcomingGames = `games?${key}&dates=${currentDate},${nextYear}&ordering=-added&page_size=12`;
 const newGames = `games?${key}&dates=${currentDate},${nextYear}&ordering=-released&page_size=12`;
 
-const popularGamesURL = () => `${baseUrl}${popularGames}`;
-const upcomingGamesURL = () => `${baseUrl}${upcomingGames}`;
-const newGamesURL = () => `${baseUrl}${newGames}`;
-
-console.log(popularGamesURL());
+export const popularGamesURL = () => `${baseUrl}${popularGames}`;
+export const upcomingGamesURL = () => `${baseUrl}${upcomingGames}`;
+export const newGamesURL = () => `${baseUrl}${newGames}`;
