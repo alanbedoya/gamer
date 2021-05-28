@@ -1,17 +1,33 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loadGames } from '../redux/actions/gamesAction';
+import { Game } from '../components';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadGames());
-  });
+  }, [dispatch]);
+
+  const { popular, newGames, upcoming } = useSelector((state) => state.games);
 
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <motion.div className='gameList'>
+      <h1>Upcoming Games</h1>
+      <motion.div>
+        {upcoming &&
+          upcoming.map((game) => (
+            <Game
+              name={game.name}
+              released={game.released}
+              id={game.id}
+              image={game.background_image}
+              key={game.id}
+            />
+          ))}
+      </motion.div>
+    </motion.div>
   );
 };
 
