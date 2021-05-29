@@ -14,8 +14,8 @@ const Home = () => {
 
   return (
     <motion.div className='gameList'>
-      <h1>Upcoming Games</h1>
-      <motion.div>
+      <h2>Upcoming Games</h2>
+      <motion.div className='games'>
         {upcoming &&
           upcoming.map((game) => (
             <Game
