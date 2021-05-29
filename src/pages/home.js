@@ -14,6 +14,32 @@ const Home = () => {
 
   return (
     <motion.div className='gameList'>
+      <h2>Popular Games</h2>
+      <motion.div className='games'>
+        {popular &&
+          popular.map((game) => (
+            <Game
+              name={game.name}
+              released={game.released}
+              id={game.id}
+              image={game.background_image}
+              key={game.id}
+            />
+          ))}
+      </motion.div>
+      <h2>New Games</h2>
+      <motion.div className='games'>
+        {newGames &&
+          newGames.map((game) => (
+            <Game
+              name={game.name}
+              released={game.released}
+              id={game.id}
+              image={game.background_image}
+              key={game.id}
+            />
+          ))}
+      </motion.div>
       <h2>Upcoming Games</h2>
       <motion.div className='games'>
         {upcoming &&
