@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadGames } from '../redux/actions/gamesAction';
-import { Game } from '../components';
+import { Game, GameDetail } from '../components';
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -14,6 +14,7 @@ const Home = () => {
 
   return (
     <motion.div className='gameList'>
+      <GameDetail />
       <h2>Popular Games</h2>
       <motion.div className='games'>
         {popular &&

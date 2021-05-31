@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 
 export const GameDetail = () => {
-  const { screen, game } = useSelector((state) => state.detail);
+  const { screenshots, game } = useSelector((state) => state.detail);
 
   return (
     <div className='card-shadow'>
@@ -25,10 +25,17 @@ export const GameDetail = () => {
         <div className='media'>
           <img src={game.background_image} alt='game_image' />
         </div>
+        <div className='description'>
+          <p>{game.description_raw}</p>
+        </div>
         <div className='gallery'>
-          {screen.results &&
-            screen.results.map((screen) => (
-              <img src={screen.image} key={screen.id} alt='gallery_image' />
+          {screenshots.results &&
+            screenshots.results.map((screenshots) => (
+              <img
+                src={screenshots.image}
+                key={screenshots.id}
+                alt='gallery_image'
+              />
             ))}
         </div>
       </div>
