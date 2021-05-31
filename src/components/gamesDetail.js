@@ -7,21 +7,21 @@ export const GameDetail = () => {
   return (
     <motion.div className='card-shadow'>
       <motion.div className='detail'>
-        <div className='stats'>
+        <motion.div className='stats'>
           <div className='rating'>
             <h3>{game.name}</h3>
             <p>Rating: {game.rating}</p>
           </div>
-          <div className='info'>
+          <motion.div className='info'>
             <h3>Platforms</h3>
-            <div className='platforms'>
+            <motion.div className='platforms'>
               {game.platforms &&
                 game.platforms.map((data) => (
                   <h3 key={data.platform.id}>{data.platform.name}</h3>
                 ))}
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
         <div className='media'>
           <img src={game.background_image} alt='game_image' />
         </div>
