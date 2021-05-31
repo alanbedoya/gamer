@@ -5,8 +5,8 @@ export const GameDetail = () => {
   const { screenshots, game } = useSelector((state) => state.detail);
 
   return (
-    <div className='card-shadow'>
-      <div className='detail'>
+    <motion.div className='card-shadow'>
+      <motion.div className='detail'>
         <div className='stats'>
           <div className='rating'>
             <h3>{game.name}</h3>
@@ -15,7 +15,7 @@ export const GameDetail = () => {
           <div className='info'>
             <h3>Platforms</h3>
             <div className='platforms'>
-              {game.platform &&
+              {game.platforms &&
                 game.platforms.map((data) => (
                   <h3 key={data.platform.id}>{data.platform.name}</h3>
                 ))}
@@ -38,7 +38,7 @@ export const GameDetail = () => {
               />
             ))}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };

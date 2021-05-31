@@ -1,0 +1,32 @@
+.card-shadow {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fbc6a4;
+  }
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
+}
+
+.detail {
+  width: 80%;
+  border-radius: 1rem;
+  padding: 2rem 20rem;
+  background: white;
+  position: absolute;
+  left: 10%;
+  color: black;
+
+  img {
+    width: 100%;
+  }
+}
