@@ -6,17 +6,30 @@ import { resizedImage } from '../common/utils';
 
 export const Game = ({ name, released, image, id }) => {
   const dispatch = useDispatch();
+
   const loadDetailHandler = () => {
     document.body.style.overflow = 'hidden';
     dispatch(loadDetail(id));
   };
 
+  const stringPathId = id.toString();
+
   return (
-    <motion.div className='styledGame' onClick={loadDetailHandler}>
+    <motion.div
+      className='styledGame'
+      initial='hidden'
+      animate='show'
+      layoutId={stringPathId}
+      onClick={loadDetailHandler}
+    >
       <Link to={`/game/${id}`}>
-        <h3>{name}</h3>
+        <motion.h3 layoutId={`title ${stringPathId}`}>{name}</motion.h3>
         <p>{released}</p>
-        <img src={resizedImage(image, 420)} alt={name} />
+        <motion.img
+          layoutId={`image ${stringPathId}`}
+          src={resizedImage(image, 420)}
+          alt={name}
+        />
       </Link>
     </motion.div>
   );

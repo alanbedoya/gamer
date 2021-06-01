@@ -3,7 +3,7 @@ import { resizedImage } from '../common/utils';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-export const GameDetail = () => {
+export const GameDetail = ({ pathId }) => {
   const { screenshots, game, isLoading } = useSelector((state) => state.detail);
 
   const history = useHistory();
@@ -20,10 +20,10 @@ export const GameDetail = () => {
     <>
       {!isLoading && (
         <motion.div className='card-shadow shadow' onClick={exitDetailHandler}>
-          <motion.div className='detail'>
+          <motion.div className='detail' layoutId={pathId}>
             <motion.div className='stats'>
               <div className='rating'>
-                <h3>{game.name}</h3>
+                <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                 <p>Rating: {game.rating}</p>
               </div>
               <motion.div className='info'>
@@ -37,7 +37,8 @@ export const GameDetail = () => {
               </motion.div>
             </motion.div>
             <motion.div className='media'>
-              <img
+              <motion.img
+                layoutId={`image ${pathId}`}
                 src={resizedImage(game.background_image, 640)}
                 alt='game_image'
               />
