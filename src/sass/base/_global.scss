@@ -31,6 +31,12 @@ h3 {
   padding: 1.5rem 0rem;
 }
 
+h4 {
+  font-size: 1vw;
+  color: #a7bbc7;
+  padding-bottom: 0.5rem;
+}
+
 p {
   font-size: 1.2rem;
   line-height: 200%;
@@ -43,5 +49,11 @@ a {
 }
 
 img {
+  width: 100%;
   display: block;
+}
+
+svg {
+  color: #d1d9d9;
+  font-size: 3vw;
 }

@@ -22,7 +22,7 @@ const Home = () => {
       <AnimateSharedLayout type='crossfade'>
         <AnimatePresence>
           {pathId && (
-            <motion.div exit={{ opacity: 0 }}>
+            <motion.div exit={{ opacity: -1 }}>
               <GameDetail pathId={pathId} />
             </motion.div>
           )}

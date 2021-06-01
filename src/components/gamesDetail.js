@@ -1,5 +1,15 @@
 import { motion } from 'framer-motion';
 import { resizedImage } from '../common/utils';
+import {
+  SiApple,
+  SiGoogleplay,
+  SiNintendoswitch,
+  SiPlaystation4,
+  SiPlaystation,
+  SiSteam,
+  SiXbox,
+} from 'react-icons/si';
+import { RiGamepadFill, RiXboxLine } from 'react-icons/ri';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -13,6 +23,29 @@ export const GameDetail = ({ pathId }) => {
     if (element.classList.contains('shadow')) {
       document.body.style.overflow = 'auto';
       history.push('/');
+    }
+  };
+
+  const platformLogo = (platform) => {
+    switch (platform) {
+      case 'Apple' || 'iOS' || 'macOS':
+        return <SiApple title={`${platform}`} />;
+      case 'Android' || 'Google Play':
+        return <SiGoogleplay title={`${platform}`} />;
+      case 'Nintendo Switch':
+        return <SiNintendoswitch title={`${platform}`} />;
+      case 'PC':
+        return <SiSteam title={`${platform}`} />;
+      case 'PlayStation 4':
+        return <SiPlaystation4 title={`${platform}`} size='3.8vw' />;
+      case 'PlayStation 5':
+        return <SiPlaystation title={`${platform}`} />;
+      case 'Xbox One':
+        return <RiXboxLine title={`${platform}`} />;
+      case 'Xbox Series S/X':
+        return <SiXbox title={`${platform}`} />;
+      default:
+        return <RiGamepadFill title={`${platform}`} />;
     }
   };
 
@@ -31,7 +64,12 @@ export const GameDetail = ({ pathId }) => {
                 <motion.div className='platforms'>
                   {game.platforms &&
                     game.platforms.map((data) => (
-                      <h3 key={data.platform.id}>{data.platform.name}</h3>
+                      <ul key={data.platform.id}>
+                        <li>
+                          <h4>{data.platform.name}</h4>
+                          {platformLogo(data.platform.name)}
+                        </li>
+                      </ul>
                     ))}
                 </motion.div>
               </motion.div>

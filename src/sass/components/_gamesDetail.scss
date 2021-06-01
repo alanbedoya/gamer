@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 12;
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
@@ -26,10 +26,6 @@
   position: absolute;
   left: 10%;
   color: black;
-
-  img {
-    width: 100%;
-  }
 }
 
 .stats {
@@ -45,18 +41,20 @@
     display: flex;
     justify-content: space-evenly;
 
-    img {
-      margin-left: 3rem;
+    ul {
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+
+      li {
+        padding-left: 2rem;
+      }
     }
   }
 }
 
 .media {
   margin-top: 5rem;
-
-  img {
-    width: 100%;
-  }
 }
 
 .description {
