@@ -31,21 +31,21 @@ export const GameDetail = ({ pathId }) => {
       case 'Apple' || 'iOS' || 'macOS':
         return <SiApple title={`${platform}`} />;
       case 'Android' || 'Google Play':
-        return <SiGoogleplay title={`${platform}`} />;
+        return <SiGoogleplay />;
       case 'Nintendo Switch':
-        return <SiNintendoswitch title={`${platform}`} />;
+        return <SiNintendoswitch />;
       case 'PC':
-        return <SiSteam title={`${platform}`} />;
+        return <SiSteam />;
       case 'PlayStation 4':
-        return <SiPlaystation4 title={`${platform}`} size='3.8vw' />;
+        return <SiPlaystation4 size='3.8vw' />;
       case 'PlayStation 5':
-        return <SiPlaystation title={`${platform}`} />;
+        return <SiPlaystation />;
       case 'Xbox One':
-        return <RiXboxLine title={`${platform}`} />;
+        return <RiXboxLine />;
       case 'Xbox Series S/X':
-        return <SiXbox title={`${platform}`} />;
+        return <SiXbox />;
       default:
-        return <RiGamepadFill title={`${platform}`} />;
+        return <RiGamepadFill />;
     }
   };
 
