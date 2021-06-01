@@ -6,6 +6,7 @@ import { loadDetail } from '../redux/actions/detailsAction';
 export const Game = ({ name, released, image, id }) => {
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
+    document.body.style.overflow = 'hidden';
     dispatch(loadDetail(id));
   };
 
