@@ -2,9 +2,13 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadGames } from '../redux/actions/gamesAction';
 import { Game, GameDetail } from '../components';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Home = () => {
+  const location = useLocation();
+  const pathId = location.pathname.split('/')[2];
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadGames());
@@ -14,7 +18,7 @@ const Home = () => {
 
   return (
     <motion.div className='gameList'>
-      <GameDetail />
+      {pathId && <GameDetail />}
       <h2>Popular Games</h2>
       <motion.div className='games'>
         {popular &&
