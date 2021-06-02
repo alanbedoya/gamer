@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { resizedImage } from '../common/utils';
+import { BsStar, BsStarFill } from 'react-icons/bs';
 import {
   SiApple,
   SiGoogleplay,
@@ -24,6 +25,20 @@ export const GameDetail = ({ pathId }) => {
       document.body.style.overflow = 'auto';
       history.push('/');
     }
+  };
+
+  const starRating = () => {
+    const star = [];
+    const rating = Math.round(game.rating);
+
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        star.push(<BsStarFill key={i} />);
+      } else {
+        star.push(<BsStar key={i} />);
+      }
+    }
+    return star;
   };
 
   const platformLogo = (platform) => {
@@ -57,7 +72,8 @@ export const GameDetail = ({ pathId }) => {
             <motion.div className='stats'>
               <div className='rating'>
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
-                <p>Rating: {game.rating}</p>
+                <p>Rating: {Math.round(game.rating)}</p>
+                {starRating()}
               </div>
               <motion.div className='info'>
                 <h3>Platforms</h3>
