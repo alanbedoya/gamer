@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadGames } from '../redux/actions/gamesAction';
-import { Game, GameDetail } from '../components';
+import { Game, GameDetail, ScrollTop } from '../components';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 
@@ -27,6 +27,7 @@ const Home = () => {
             </motion.div>
           )}
         </AnimatePresence>
+        <ScrollTop />
         <h2>Upcoming Games</h2>
         <motion.div className='games'>
           {upcoming &&

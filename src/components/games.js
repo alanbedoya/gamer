@@ -27,7 +27,7 @@ export const Game = ({ name, released, image, id }) => {
         <p>{released}</p>
         <motion.img
           layoutId={`image ${stringPathId}`}
-          src={resizedImage(image, 420)}
+          src={resizedImage(image, 1280)}
           alt={name}
         />
       </Link>

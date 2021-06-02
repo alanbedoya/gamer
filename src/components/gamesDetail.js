@@ -93,7 +93,7 @@ export const GameDetail = ({ pathId }) => {
             <motion.div className='media'>
               <motion.img
                 layoutId={`image ${pathId}`}
-                src={resizedImage(game.background_image, 640)}
+                src={resizedImage(game.background_image, 1920)}
                 alt='game_image'
               />
             </motion.div>
@@ -104,7 +104,7 @@ export const GameDetail = ({ pathId }) => {
               {screenshots.results &&
                 screenshots.results.map((screenshots) => (
                   <img
-                    src={resizedImage(screenshots.image, 640)}
+                    src={resizedImage(screenshots.image, 1920)}
                     key={screenshots.id}
                     alt='gallery_image'
                   />

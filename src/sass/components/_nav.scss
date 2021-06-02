@@ -24,6 +24,7 @@
     padding: 0.5rem;
     border: none;
     margin-top: 1rem;
+    caret-color: #94d0cc;
     outline-color: #da7f8f;
     box-shadow: rgba(218, 127, 143, 0.4) -5px 5px,
       rgba(218, 127, 143, 0.3) -10px 10px, rgba(218, 127, 143, 0.2) -15px 15px,
@@ -36,6 +37,7 @@
     padding: 0.8rem 2rem;
     cursor: pointer;
     background: #f39189;
+    opacity: 0.5;
     color: white;
   }
 }

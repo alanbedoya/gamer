@@ -1,7 +1,15 @@
 export const resizedImage = (imageURL, size) => {
-  const image = imageURL.match(/media\/screenshots/)
-    ? imageURL.replace('media/sceenshots', `media/resize/${size}/-/screenshots`)
-    : imageURL.replace('media/game/', `/media/resize${size}/-/games/`);
+  let image;
+  if (imageURL) {
+    image = imageURL.match(/media\/screenshots/)
+      ? imageURL.replace(
+          'media/screenshots',
+          `media/resize/${size}/-/screenshots`
+        )
+      : imageURL.replace('/media/games', `/media/resize/${size}/-/games`);
+  } else {
+    image = imageURL;
+  }
 
   return image;
 };
