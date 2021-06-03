@@ -43,9 +43,9 @@ export const GameDetail = ({ pathId }) => {
 
   const platformLogo = (platform) => {
     switch (platform) {
-      case 'Apple' || 'iOS' || 'macOS':
+      case 'Apple' && 'iOS' && 'macOS':
         return <SiApple title={`${platform}`} />;
-      case 'Android' || 'Google Play':
+      case 'Android' && 'Google Play':
         return <SiGoogleplay />;
       case 'Nintendo Switch':
         return <SiNintendoswitch />;
