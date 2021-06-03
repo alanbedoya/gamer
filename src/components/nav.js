@@ -3,6 +3,7 @@ import { FaDiceD20 } from 'react-icons/fa';
 import { useState } from 'react';
 import { fetchSearch } from '../redux/actions/gamesAction';
 import { useDispatch } from 'react-redux';
+import { fadeIn } from '../animation';
 
 export const Nav = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,12 @@ export const Nav = () => {
   };
 
   return (
-    <motion.nav className='styledNav'>
+    <motion.nav
+      className='styledNav'
+      variants={fadeIn}
+      initial='hidden'
+      animate='show'
+    >
       <motion.div className='logo'>
         <FaDiceD20 onClick={clearSearched} />
         <h1>Gamer</h1>

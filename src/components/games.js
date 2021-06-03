@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loadDetail } from '../redux/actions/detailsAction';
 import { resizedImage } from '../common/utils';
+import { popup } from '../animation';
 
 export const Game = ({ name, released, image, id }) => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ export const Game = ({ name, released, image, id }) => {
   return (
     <motion.div
       className='styledGame'
+      variants={popup}
       initial='hidden'
       animate='show'
       layoutId={stringPathId}

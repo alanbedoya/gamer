@@ -4,6 +4,7 @@ import { loadGames } from '../redux/actions/gamesAction';
 import { Game, GameDetail, ScrollTop } from '../components';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { fadeIn } from '../animation';
 
 const Home = () => {
   const location = useLocation();
@@ -20,7 +21,12 @@ const Home = () => {
   );
 
   return (
-    <motion.div className='gameList'>
+    <motion.div
+      className='gameList'
+      variants={fadeIn}
+      initial='hidden'
+      animate='show'
+    >
       <AnimateSharedLayout type='crossfade'>
         <AnimatePresence>
           {pathId && (
@@ -31,7 +37,12 @@ const Home = () => {
         </AnimatePresence>
         <ScrollTop />
         {searched.length ? (
-          <div className='searched'>
+          <motion.div
+            className='searched'
+            variants={fadeIn}
+            initial='hidden'
+            animate='show'
+          >
             <h2>Searched Games</h2>
             <motion.div className='games'>
               {searched &&
@@ -45,7 +56,7 @@ const Home = () => {
                   />
                 ))}
             </motion.div>
-          </div>
+          </motion.div>
         ) : null}
         {searched.length ? null : (
           <>
