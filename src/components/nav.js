@@ -30,8 +30,8 @@ export const Nav = () => {
       initial='hidden'
       animate='show'
     >
-      <motion.div className='logo'>
-        <FaDiceD20 onClick={clearSearched} />
+      <motion.div className='logo' onClick={clearSearched}>
+        <FaDiceD20 />
         <h1>Gamer</h1>
       </motion.div>
       <form className='search'>
