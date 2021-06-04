@@ -1,5 +1,5 @@
 import Home from './pages/home';
-import { Nav } from './components';
+import { Nav, Footer } from './components';
 import { Route } from 'react-router-dom';
 import './sass/main.scss';
 
@@ -9,6 +9,7 @@ function App() {
       <Route path={['/game/:id', '/']}>
         <Nav />
         <Home />
+        <Footer />
       </Route>
     </div>
   );

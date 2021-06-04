@@ -4,16 +4,8 @@
   box-sizing: border-box;
 }
 
-html {
-  &::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #94d0cc;
-  }
-}
-
 body {
+  overflow: auto;
   font-family: 'Tomorrow', sans-serif;
   max-width: 1920px;
   margin: auto;
