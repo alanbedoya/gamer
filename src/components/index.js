@@ -3,3 +3,4 @@ export * from './gamesDetail';
 export * from './nav';
 export * from './footer';
 export * from './scrollTop';
+export * from './carousel';
