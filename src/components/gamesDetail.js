@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { resizedImage } from '../common/utils';
+import { Carousel } from '../components';
 import { BsStar, BsStarFill } from 'react-icons/bs';
 import {
   SiApple,
@@ -100,16 +101,7 @@ export const GameDetail = ({ pathId }) => {
             <motion.div className='description'>
               <p>{game.description_raw}</p>
             </motion.div>
-            <div className='gallery'>
-              {screenshots.results &&
-                screenshots.results.map((screenshots) => (
-                  <img
-                    src={resizedImage(screenshots.image, 1920)}
-                    key={screenshots.id}
-                    alt='gallery_image'
-                  />
-                ))}
-            </div>
+            <Carousel slides={screenshots.imaage} />
           </motion.div>
         </motion.div>
       )}
