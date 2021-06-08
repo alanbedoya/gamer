@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { resizedImage } from '../common/utils';
+import { fadeIn } from '../animation';
 import { useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 export const Carousel = () => {
@@ -32,7 +34,10 @@ export const Carousel = () => {
             key={screenshots.id}
           >
             {index === current && (
-              <img
+              <motion.img
+                variants={fadeIn}
+                initial='hidden'
+                animate='show'
                 src={resizedImage(screenshots.image, 1920)}
                 key={screenshots.id}
                 alt='carousel_image'

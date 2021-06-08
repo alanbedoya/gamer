@@ -1,5 +1,30 @@
 .gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  img {
+    height: 37rem;
+  }
+
+  .leftArrow {
+    position: absolute;
+    top: 85%;
+    left: 1rem;
+    font-size: 3vw;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .rightArrow {
+    position: absolute;
+    top: 85%;
+    right: 1rem;
+    font-size: 3vw;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .leftArrow,
+  .rightArrow {
+    &:hover {
+      color: #686d76;
+    }
+  }
 }
