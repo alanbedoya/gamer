@@ -21,7 +21,6 @@ export const ScrollTop = () => {
   return (
     <RiArrowUpCircleFill
       className='scrollTop'
-      size='7vw'
       onClick={scrollTop}
       style={{ display: showScroll ? 'flex' : 'none' }}
     />

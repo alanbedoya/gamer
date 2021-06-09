@@ -53,7 +53,7 @@ export const GameDetail = ({ pathId }) => {
       case 'PC':
         return <SiSteam />;
       case 'PlayStation 4':
-        return <SiPlaystation4 size='3.8vw' />;
+        return <SiPlaystation4 />;
       case 'PlayStation 5':
         return <SiPlaystation />;
       case 'Xbox One':
@@ -74,7 +74,7 @@ export const GameDetail = ({ pathId }) => {
               <div className='rating'>
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                 <p>Rating: {Math.round(game.rating)}</p>
-                {starRating()}
+                <ul>{starRating()}</ul>
               </div>
               <motion.div className='info'>
                 <h3>Platforms</h3>

@@ -6,7 +6,7 @@
 
 body {
   overflow: auto;
-  max-width: 1920px;
+  max-width: $xlBreakpoint;
   margin: auto;
   padding: auto;
   background: $background;

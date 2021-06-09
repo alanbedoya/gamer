@@ -1,6 +1,6 @@
 .gallery {
   img {
-    height: 37rem;
+    height: 49vw;
   }
 
   .leftArrow {
@@ -25,6 +25,28 @@
   .rightArrow {
     &:hover {
       color: $grey;
+    }
+  }
+}
+
+@media (max-width: $smBreakpoint) {
+  .gallery {
+    img {
+      height: 49vw;
+    }
+
+    .leftArrow,
+    .rightArrow {
+      top: 94%;
+      font-size: 1rem;
+    }
+
+    .leftArrow {
+      left: 0.1rem;
+    }
+
+    .rightArrow {
+      right: 0.1rem;
     }
   }
 }

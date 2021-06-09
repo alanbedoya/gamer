@@ -24,6 +24,7 @@ p {
 
 input {
   font-family: 'Saira Stencil One', cursive;
+  font-size: 1.5rem;
 }
 
 a {
@@ -32,4 +33,10 @@ a {
 
 svg {
   font-size: 3vw;
+}
+
+@media (max-width: $smBreakpoint) {
+  h2 {
+    font-size: 1.8rem;
+  }
 }

@@ -1,45 +1,56 @@
 .styledNav {
   padding: 3rem 5rem;
   text-align: center;
-}
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  cursor: pointer;
-  svg {
-    color: $pink;
-    width: 2rem;
-    height: 2rem;
-    padding-right: 0.2rem;
-  }
-}
-
-.search {
-  input {
-    width: 30%;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    border: none;
-    margin-top: 1rem;
-    caret-color: $teal;
-    border: 3px solid $pink;
-    border-radius: 10px;
-    outline-color: $pink;
-    box-shadow: rgba($pink, 0.4) -5px 5px, rgba($pink, 0.3) -10px 10px,
-      rgba($pink, 0.2) -15px 15px, rgba($pink, 0.1) -20px 20px,
-      rgba($pink, 0.05) -25px 25px;
-  }
-
-  button {
-    font-size: 1.5rem;
-    border: none;
-    padding: 0.8rem 2rem;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     cursor: pointer;
-    background: $peach;
-    color: $white;
-    border-radius: 10px;
+    svg {
+      color: $pink;
+      font-size: 2rem;
+      padding-right: 0.2rem;
+    }
+  }
+
+  .search {
+    input {
+      width: 40%;
+      padding: 0.5rem;
+      border: none;
+      margin-top: 1rem;
+      caret-color: $teal;
+      border: 3px solid $pink;
+      border-radius: 10px;
+      outline-color: $pink;
+      box-shadow: rgba($pink, 0.4) -5px 5px, rgba($pink, 0.3) -10px 10px,
+        rgba($pink, 0.2) -15px 15px, rgba($pink, 0.1) -20px 20px,
+        rgba($pink, 0.05) -25px 25px;
+    }
+
+    button {
+      font-size: 1.5rem;
+      border: none;
+      padding: 0.8rem 2rem;
+      cursor: pointer;
+      background: $peach;
+      color: $white;
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: $smBreakpoint) {
+    padding: 3rem 1rem;
+
+    .search {
+      display: flex;
+      flex-flow: column wrap;
+      input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }
