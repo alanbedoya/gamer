@@ -1,10 +1,10 @@
 .styledGame {
   min-height: 30vh;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba($white, 0.6);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(11px);
   border-radius: 10px;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 30px rgba($black, 0.2);
   text-align: center;
   border-radius: 1rem;
   cursor: pointer;

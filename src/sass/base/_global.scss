@@ -9,32 +9,25 @@ body {
   max-width: 1920px;
   margin: auto;
   padding: auto;
-  background: #ccf2f4;
+  background: $background;
+}
+
+h3,
+h4 p,
+a,
+svg {
+  color: $black;
 }
 
 h3 {
-  color: #222831;
   padding: 1.5rem 0rem;
 }
 
 h4 {
-  color: #222831;
   padding-bottom: 0.5rem;
-}
-
-p {
-  color: #222831;
-}
-
-a {
-  color: #222831;
 }
 
 img {
   width: 100%;
   display: block;
-}
-
-svg {
-  color: #222831;
 }

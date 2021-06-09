@@ -1,6 +1,6 @@
 .scrollTop {
   position: fixed;
-  color: #7b6079;
+  color: $purple;
   right: 0;
   bottom: 30px;
   align-items: center;
@@ -8,11 +8,11 @@
   z-index: 9;
   cursor: pointer;
   animation: fadeIn 0.3s;
-  transition: opacity 0.4s;
-}
+  transition: opacity 0.3s;
 
-.scrollTop:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -20,6 +20,6 @@
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
