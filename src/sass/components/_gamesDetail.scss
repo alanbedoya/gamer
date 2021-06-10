@@ -69,7 +69,7 @@
   margin: 5rem 0rem;
 }
 
-@media (max-width: $smBreakpoint) {
+@media (min-width: $smBreakpoint) and (max-width: $mdBreakpoint) {
   .detail {
     width: 85%;
     padding: 2rem 1rem;
@@ -112,11 +112,11 @@
   }
 }
 
-@media (max-width: $lgBreakpoint) {
+@media (min-width: $mdBreakpoint2) and (max-width: $lgBreakpoint) {
   .detail {
     width: 90%;
     left: 5%;
-    padding: 2rem 2rem;
+    padding: 2rem 4rem;
   }
 
   .info {

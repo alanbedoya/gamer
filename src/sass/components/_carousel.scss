@@ -29,7 +29,7 @@
   }
 }
 
-@media (max-width: $smBreakpoint) {
+@media (min-width: $smBreakpoint) and (max-width: $mdBreakpoint) {
   .gallery {
     img {
       height: 49vw;
