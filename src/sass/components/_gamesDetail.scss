@@ -7,13 +7,17 @@
   top: 0;
   left: 0;
   z-index: 12;
-
   &::-webkit-scrollbar {
     width: 0.5rem;
+    background-color: $peach;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $orange;
+    background-color: $peach;
     border-radius: 20px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: $teal;
   }
 }
 
