@@ -10,15 +10,17 @@
   &::-webkit-scrollbar {
     width: 0.5rem;
     background-color: $peach;
-    z-index: 13;
+    -webkit-background-color: $peach;
   }
   &::-webkit-scrollbar-thumb {
     background-color: $peach;
+    -webkit-background-color: $peach;
     border-radius: 20px;
   }
   &::-webkit-scrollbar-track {
     border-radius: 20px;
     background-color: $teal;
+    -webkit-background-color: $teal;
   }
 }
 
