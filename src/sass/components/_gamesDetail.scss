@@ -2,26 +2,25 @@
   width: 100%;
   min-height: 100vh;
   overflow-y: scroll;
-  background: rgba($white, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 12;
-  // .card-shadow::-webkit-scrollbar {
-  //   width: 0.5rem;
-  //   background-color: orange;
-  //   -webkit-background-color: orange;
-  // }
-  // .card-shadow::-webkit-scrollbar-thumb {
-  //   background-color: orange;
-  //   -webkit-background-color: orange;
-  //   border-radius: 20px;
-  // }
-  // .card-shadow::-webkit-scrollbar-track {
-  //   border-radius: 20px;
-  //   background-color: teal;
-  //   -webkit-background-color: teal;
-  // }
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: orange;
+    -webkit-background-color: orange;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: orange;
+    -webkit-background-color: orange;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: teal;
+    -webkit-background-color: teal;
+  }
 }
 
 .detail {
