@@ -23,8 +23,9 @@
       margin-top: 1rem;
       caret-color: $teal;
       border: 3px solid $pink;
-      border-radius: 10px;
+      border-radius: 10px 0 0 10px;
       outline-color: $pink;
+      -webkit-outline-color: $pink;
       box-shadow: rgba($pink, 0.4) -5px 5px, rgba($pink, 0.3) -10px 10px,
         rgba($pink, 0.2) -15px 15px, rgba($pink, 0.1) -20px 20px,
         rgba($pink, 0.05) -25px 25px;
@@ -36,23 +37,29 @@
     button {
       font-size: 1.5rem;
       border: none;
-      padding: 0.8rem 2rem;
+      padding: 1rem 2rem;
       cursor: pointer;
       background: $peach;
       color: $white;
-      border-radius: 10px;
+      border-radius: 0 10px 10px 0;
     }
   }
 
-  @media (max-width: $smBreakpoint) {
+  @media (max-width: $mdBreakpoint) {
     padding: 3rem 1rem;
 
     .search {
       display: flex;
       flex-flow: column wrap;
+
       input {
         width: 100%;
         margin-bottom: 0.5rem;
+        border-radius: 10px;
+      }
+
+      button {
+        border-radius: 10px;
       }
     }
   }

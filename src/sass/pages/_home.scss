@@ -14,7 +14,7 @@
   grid-row-gap: 5rem;
 }
 
-@media (max-width: $smBreakpoint) {
+@media (max-width: $mdBreakpoint) {
   .gameList {
     padding: 0rem 1rem;
   }
