@@ -10,6 +10,7 @@
   &::-webkit-scrollbar {
     width: 0.5rem;
     background-color: $peach;
+    z-index: 13;
   }
   &::-webkit-scrollbar-thumb {
     background-color: $peach;
