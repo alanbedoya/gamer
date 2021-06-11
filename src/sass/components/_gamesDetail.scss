@@ -3,23 +3,24 @@
   min-height: 100vh;
   overflow-y: scroll;
   position: fixed;
+  background: rgba($white, 0.5);
   top: 0;
   left: 0;
   z-index: 12;
   &::-webkit-scrollbar {
     width: 0.5rem;
-    background-color: orange;
-    -webkit-background-color: orange;
+    background-color: $peach;
+    -webkit-background-color: $peach;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: orange;
-    -webkit-background-color: orange;
+    background-color: $peach;
+    -webkit-background-color: $peach;
     border-radius: 20px;
   }
   &::-webkit-scrollbar-track {
     border-radius: 20px;
-    background-color: teal;
-    -webkit-background-color: teal;
+    background-color: $teal;
+    -webkit-background-color: $teal;
   }
 }
 
