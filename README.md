@@ -1,70 +1,28 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gamer
 
-## Available Scripts
+Is a game searching app at it's core. It shows users right away 3 categories. Upcoming games, popular games, and new games. They are able to scroll down and view the constely updated categories and easily scroll back up to the top by clicking the scroll to top button. If a user want's to know more about a specific game, they can click on the card and it while do an animation to expand and show more details about it. The user will be able to see the title, what platforms the game is on, the rating of the game, a description, and lastly an image carousel showing all screenshots of the game. All of this is being pulled from the 3rd party api Rawg.io. A user can search up any game title and anything related to their search will appear, they can then click on the card and view all the deatils about it. To go back to the homepage a user can simply click on the Logo to do so.
 
-In the project directory, you can run:
+## Live Site
 
-### `npm start`
+Check out the live version of the app [here](https://updated-gamer.netlify.app/)!
+  
+## Screenshots
+#### Homepage 
+![Homepage](https://res.cloudinary.com/alanbedoya/image/upload/v1624263029/Readme.md/2021-06-16_23-50-13_f9jsd0.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Game Details
+![Game Details](https://res.cloudinary.com/alanbedoya/image/upload/v1624309836/Readme.md/2021-06-21_14-10-17_jzginm.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Search Results
+![Search Results](https://res.cloudinary.com/alanbedoya/image/upload/v1624309930/Readme.md/2021-06-21_14-11-37_tkpiop.png)
+## Tech Stack
 
-### `npm run build`
+**Client:** React, Redux, Redux Thunk, Sass, Framer Motion, React Icons, Axios and Rawg.io API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Deployment:** Netlify
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
